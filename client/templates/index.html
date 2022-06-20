@@ -1,0 +1,48 @@
+<!-- Client HTML -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <title>Random Facts</title>
+    <meta charset="utf-8" />
+    <!-- Using CSS to style HTML page -->
+    <!-- Static was used to allow HTML, run from the application to access CSS file -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="body">
+    <!-- Class header is used to create a header style in all HTML files -->
+    <div class="header">
+      <a href="index.html"><h1>A Random Fact for Each Number</h1></a>
+    </div>
+    <!-- Content to be placed inside -->
+    <div class="content">
+      <!-- JS used for styling -->
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"
+      ></script>
+      <!-- A form is used to pass the input into Web Service 1 -->
+      <div class="col">
+        <form action="{{ url_for('get_facts') }}" method="post">
+          <label id="maintxt" for="invoke_api_1"
+            >Select a number between 0 and 9</label
+          ><br />
+          <input id="boxin" type="number" name="invoke_api_1" />
+          <button class="but" type="submit">Pick</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

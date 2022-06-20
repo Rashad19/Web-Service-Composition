@@ -1,0 +1,172 @@
+/* Reset all margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Change font and font color and add a border */
+.body {
+  background-color: bisque;
+  font-family: "Fira Sans", serif;
+  border-top: 1px solid rgb(128, 128, 128);
+  border-right: 1px solid rgb(128, 128, 128);
+  border-left: 1px solid rgb(128, 128, 128);
+}
+
+/* Create header area and center information */
+.header {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(60, 50, 40);
+  background-color: burlywood;
+  border: 1px solid rgb(175, 175, 175);
+}
+
+/* Display country below box */
+a {
+  display: block;
+  text-decoration: none;
+}
+
+/* Set link color to a shade of brown */
+a:link {
+  text-decoration: none;
+  color: rgb(60, 50, 40);
+}
+
+/* Set link color to a shade of brown */
+a:visited {
+  text-decoration: none;
+  color: rgb(60, 50, 40);
+}
+
+/* Set link color to a shade of brown */
+a:active {
+  text-decoration: none;
+  color: rgb(60, 50, 40);
+}
+
+/* Set link color to a shade of brown */
+a:hover h1 {
+  text-decoration: none;
+  color: rgb(60, 50, 40);
+}
+
+/* Center content and space from header */
+.content {
+  text-align: center;
+  margin-top: 80px;
+}
+
+form {
+  /* Center the form on the page */
+  margin: 0 auto;
+  width: 300px;
+  height: 180px;
+  /* Form outline */
+  padding: 1em;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 1em;
+}
+
+#fctcol {
+  /* Center the form on the page */
+  margin: 0 auto;
+  width: fit-content;
+  height: 180px;
+  /* Form outline */
+  padding: 1em;
+  /* Add border and make it more round */
+  border: 1px solid rgb(0, 0, 0);
+  background-color: rgba(222, 184, 135, 0.384);
+  border-radius: 1em;
+}
+
+/* Set link color of fact and center it */
+#fctcol h1 {
+  height: 180px;
+  width: auto;
+  line-height: 180px;
+  text-align: center;
+  color: rgb(60, 50, 40);
+}
+
+/* Set country color to a shade of blue when hovering over link */
+#fctcol a:hover {
+  text-decoration: underline;
+  color: rgb(0, 81, 255);
+}
+
+/* Set place color to a shade of blue when hovering over link */
+#plcrow a:hover {
+  text-decoration: underline;
+  color: rgb(0, 81, 255);
+}
+
+/* Style description of place chosen */
+@media screen and (min-width: 480px) {
+  #sumplc p {
+    width: 88vw;
+    height: fit-content;
+    font-size: 25px;
+    margin: auto;
+    text-align: center;
+    color: rgb(60, 50, 40);
+    background-color: rgba(222, 184, 135, 0.384);
+    border-radius: 0.3em;
+    border: 1px solid rgb(175, 175, 175);
+  }
+}
+
+/* Set list of places in boxes next to each other and centered */
+#plcrow h1 ul li {
+  width: 25%;
+  height: 180px;
+  margin: auto;
+  margin-left: 25px;
+  margin-right: 25px;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(222, 184, 135, 0.384);
+  border-radius: 0.3em;
+  border: 1px solid rgb(175, 175, 175);
+}
+
+/* Change font size of instruction */
+#maintxt {
+  font-size: 25px;
+}
+
+/* Change font size of input and adjust position */
+#boxin {
+  margin-top: 20px;
+  font-size: 25px;
+}
+
+input,
+textarea {
+  /* To make sure that all text fields have the same font settings
+    By default, textareas have a monospace font */
+  /* Uniform text field size */
+  width: 80px;
+  box-sizing: border-box;
+  /* Match form field borders */
+  border: 1px solid #999;
+  border-radius: 0.2em;
+  padding-left: 10px;
+}
+
+.but {
+  /* This extra margin represent roughly the same space as the space
+    between the labels and their text fields */
+  border-radius: 0.2em;
+  padding-top: 6px;
+  margin-left: 2px;
+  height: 38px;
+  width: 60px;
+  color: rgb(60, 50, 40);
+}

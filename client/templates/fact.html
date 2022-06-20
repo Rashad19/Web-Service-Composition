@@ -1,0 +1,32 @@
+<!-- Web Service 1 HTML -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <title>Fact</title>
+    <meta charset="UTF-8" />
+    <!-- Using CSS to style HTML page -->
+    <!-- Static was used to allow HTML, run from the application to access CSS file -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body class="body">
+    <!-- Class header is created to be used in all HTML files -->
+    <div class="header">
+      <!-- Using double curly brackets to display the country passed from the client -->
+      <a href="index.html"><h1>Fact about {{country}}</h1></a>
+    </div>
+    <!-- Content to be placed inside -->
+    <div class="content">
+      <!-- ID is used to individually manipulate style in css -->
+      <div id="fctcol">
+        <h1>
+          <!-- Using a country link to invoke Web Service 2 -->
+          {{fact}} <a href="/client/countries/{{country}}">{{country}}</a>
+        </h1>
+      </div>
+    </div>
+  </body>
+</html>

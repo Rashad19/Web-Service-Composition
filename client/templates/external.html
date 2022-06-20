@@ -1,0 +1,30 @@
+<!-- Web Service 3 HTML -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <title>Summary about</title>
+    <meta charset="UTF-8" />
+    <!-- Using CSS to style HTML page -->
+    <!-- Static was used to allow HTML, run from the application to access CSS file -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body class="body">
+    <!-- Class header is created to be used in all HTML files -->
+    <div class="header">
+      <!-- Using double curly brackets to display the place passed from Web Service 2 -->
+      <a href="index.html"><h1>Information about {{place}}</h1></a>
+    </div>
+    <!-- Content to be placed inside -->
+    <div class="content">
+      <!-- ID is used to individually manipulate style in css -->
+      <div id="sumplc">
+        <!-- A description about the place chosen before -->
+        <p>{{summary}}</p>
+      </div>
+    </div>
+  </body>
+</html>

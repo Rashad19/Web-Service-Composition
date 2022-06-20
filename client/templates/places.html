@@ -1,0 +1,40 @@
+<!-- Web Service 2 HTML -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <title>Places in {{place[0].country}}</title>
+    <meta charset="UTF-8" />
+    <!-- Using CSS to style HTML page -->
+    <!-- Static was used to allow HTML, run from the application to access CSS file -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body class="body">
+    <!-- Class header is created to be used in all HTML files -->
+    <div class="header">
+      <!-- Using double curly brackets to display the country passed from Web Service 1 -->
+      <h1>Famous Sights in {{place[0].country}}</h1>
+    </div>
+    <!-- Content to be placed inside -->
+    <div class="content">
+      <!-- ID is used to individually manipulate style in css -->
+      <div id="plcrow">
+        <h1>
+          <!-- A list and for loop are used to display all famous places in given country -->
+          <ul>
+            {%for x in range(place|length)%}
+            <li>
+              <a href="/client/external/{{place[x].name}}">
+                {{place[x].name}},</br> {{place[x].city}}, {{place[x].country}}
+              </a>
+            </li>
+            {%endfor%}
+          </ul>
+        </h1>
+      </div>
+    </div>
+  </body>
+</html>
